@@ -11,7 +11,7 @@ public class LottoProcess {
         resultView.amountOfTicketsBought(ticketAmount);
         int[][] randomNumbersOfArray = RandomGenerator.generateRandomNumberOfArraysOfArray(ticketAmount,6,45);
         resultView.showTickets(randomNumbersOfArray);
-        String lastWeekLotteryPrizeNumber = inputView.getLotteryNumber();
-
+        String lastWeekLotteryPrizeNumberString = inputView.getLotteryNumber();
+        int[] lotteryNumbers = Extractor.extractNumberFromString(lastWeekLotteryPrizeNumberString);
     }
 }
