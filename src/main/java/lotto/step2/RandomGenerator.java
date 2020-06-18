@@ -3,7 +3,7 @@ package lotto.step2;
 import java.util.Arrays;
 import java.util.Random;
 
-public class RandomNumber {
+public class RandomGenerator {
 
     public static int[][] generateRandomNumberOfArraysOfArrays(int amountOfArraysofArrays, int amountOfNumbersOfArraysOfArrays, int maxRangeOfNumber) {
         int[][] randomNumbersOfArraysOfArrays = new int[amountOfArraysofArrays][];
