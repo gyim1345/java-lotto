@@ -15,5 +15,7 @@ public class LottoProcess {
         String lastWeekLotteryPrizeNumberString = inputView.getLotteryNumber();
         int[] lotteryNumbers = Extractor.extractNumberFromString(lastWeekLotteryPrizeNumberString);
         int[] prizeStatistics = Lotto.getPrizeStatistics(lotteryNumbers, randomLotteryTickets);
+        int[] totalPrizes = new int[] {5000, 50000, 1500000, 2000000000};
+        resultView.showStatistics(prizeStatistics, totalPrizes);
     }
 }

@@ -13,4 +13,10 @@ public class resultView {
         }
         System.out.println();
     }
+
+    public static void showStatistics(int[] statistics, int[] prizeStatistics) {
+        for(int i = 0; i<prizeStatistics.length; i++) {
+            System.out.println(i+3+"개 일치 (" + prizeStatistics[i] + ")- " +statistics[i] +"개");
+        }
+    }
 }
