@@ -1,6 +1,8 @@
 package lotto.step2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class RandomGenerator {
@@ -13,7 +15,7 @@ public class RandomGenerator {
         return randomNumbersOfArraysOfArrays;
     }
 
-    private static int[] generateSortedRandomNumbersOfArray(int amount, int maxRange){
+    public static int[] generateSortedRandomNumbersOfArray(int amount, int maxRange){
         int[] randomNumbersOfArray = new int[amount];
         for(int i=0; i<amount; i++) {
             randomNumbersOfArray[i] = new Random().nextInt(maxRange);
@@ -21,6 +23,6 @@ public class RandomGenerator {
         Arrays.sort(randomNumbersOfArray);
         return randomNumbersOfArray;
     }
-    
-    
+
+
 }
