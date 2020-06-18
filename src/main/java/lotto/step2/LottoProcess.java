@@ -5,5 +5,6 @@ public class LottoProcess {
         int cashAmount = inputView.getCashAmount();
         int ticketAmount = Lotto.getTicketAmount(cashAmount);
         resultView.amountOfTicketsBought(ticketAmount);
+        int[][] lotteryTickets = Lotto.getTickets(ticketAmount);
     }
 }
