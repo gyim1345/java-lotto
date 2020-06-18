@@ -19,5 +19,6 @@ public class LottoProcess {
         resultView.showStatistics(prizeStatistics, totalPrizes);
         double profitPercentage = Lotto.getProfitPercentage(prizeStatistics, totalPrizes, cashAmount);
         boolean profited = Lotto.checkIfProfited(profitPercentage);
+        resultView.showProfitStatistics(profitPercentage, profited);
     }
 }

@@ -19,4 +19,9 @@ public class resultView {
             System.out.println(i+3+"개 일치 (" + prizeStatistics[i] + ")- " +statistics[i] +"개");
         }
     }
+
+    public static void showProfitStatistics(double profitPercentage, boolean profited) {
+        String profit = profited ? "이득" : "손해";
+        System.out.println("총 수익률은 " + profitPercentage + "입니다.(기준이 1이기 때문에 결과적으로 "+profit+ "라는 의미임)");
+    }
 }
