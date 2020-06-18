@@ -1,4 +1,4 @@
-package lotto.step2;
+package lotto.step2.ui;
 
 public class resultView {
     public static void amountOfTicketsBought(int ticketAmount) {

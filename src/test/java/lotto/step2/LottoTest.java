@@ -1,10 +1,10 @@
 package lotto.step2;
 
+import lotto.step2.domain.Lotto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.PATH;
 
 public class LottoTest {
 
