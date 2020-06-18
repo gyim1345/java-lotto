@@ -1,0 +1,28 @@
+UI
+- inputView
+    1. get input cash amount(int) from scanner
+    2. get input lottery numbers(string) from scanner
+- resultView
+    1. print "cashAmount" + "개를 구매했습니다."
+    2. print random numbers in array
+    3. print "지난 주 당첨 번호를 입력해 주세요." before getting lottery numbers
+    4. print "당첨 통계" "---------" after input lottery numbers
+    5. print "3개 일치 (5000원)" + amount match ,
+       "4개 일치 (50000원)" + amount match ,
+       "5개 일치 (1500000원)" + amount match,
+       " 6개 일치 (2000000000원)" + amount match,
+       "총 수익률은" + rate of return + "입니다."  + (기준이 1이기 때문에 결과적으로 손해라는 의미임)(only if rate of return < 1)
+ +
+
+Domain
+- RandomNumbers
+    1. use Collections.shuffle() to generate random numbers
+
+- Lottery
+    1. generate lottery Number
+    2. check lottery Number and return match amounts
+
+- Extractor
+    1. extract lottery number from string input
+
+
