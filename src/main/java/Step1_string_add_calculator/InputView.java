@@ -1,3 +1,5 @@
+package Step1_string_add_calculator;
+
 import java.util.Scanner;
 
 public class InputView {

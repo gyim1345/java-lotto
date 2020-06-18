@@ -1,3 +1,6 @@
+package Step1_string_add_calculaotr;
+
+import Step1_string_add_calculator.ArithmeticOperator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
