@@ -47,4 +47,24 @@ public class LottoTest {
         assertThat(lotto.getPrizeStatistics(new int[] {1,2,3,4,5,6}, new int[][] {{1,2,3,4,5,6},{1,3,5,6,7,8}})).isEqualTo(new int[] {0,0,0,1});
     }
 
+    @DisplayName("총 수입")
+    @Test
+    public void getTotalProfit() {
+        assertThat(lotto.getTotalProfit(new int[] {1,2,3}, new int[] {1000,2000,3000})).isEqualTo(14000);
+    }
+
+    @DisplayName("수입률")
+    @Test
+    public void getProfitPercentage() {
+        assertThat(lotto.getProfitPercentage(new int[] {1,2,3}, new int[] {1000,2000,3000}, 10000)).isEqualTo(1.4);
+    }
+
+    @DisplayName("이득 혹은 손해")
+    @Test
+    public void checkIfProfitedTest() {
+        assertThat(lotto.checkIfProfited(100)).isEqualTo(true);
+        assertThat(lotto.checkIfProfited(.99)).isEqualTo(false);
+        assertThat(lotto.checkIfProfited(1)).isEqualTo(true);
+
+    }
 }
