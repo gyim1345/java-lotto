@@ -1,6 +1,6 @@
 package lotto.step2.domain;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
 
 public class Lotto {
 
@@ -59,4 +59,23 @@ public class Lotto {
         return count;
     }
 
+    public static double getProfitPercentage(int[] prizeStatistics, int[] totalPrizes, int cashAmount) {
+        int totalSumOfPrize = getTotalProfit(prizeStatistics, totalPrizes);
+        return (double) totalSumOfPrize/cashAmount;
+    }
+
+    public static int getTotalProfit(int[] prizeStatistics, int[] totalPrizes) {
+        int totalProfit = 0;
+        for(int i =0; i< prizeStatistics.length; i++) {
+            totalProfit += prizeStatistics[i] * totalPrizes[i];
+        }
+        return totalProfit;
+    }
+
+    public static boolean checkIfProfited(double profitPercentage) {
+        if(profitPercentage>=1) {
+            return true;
+        }
+        return false;
+    }
 }
