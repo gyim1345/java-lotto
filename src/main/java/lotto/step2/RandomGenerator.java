@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class RandomGenerator {
 
-    public static int[][] generateRandomNumberOfArraysOfArrays(int amountOfArraysofArrays, int amountOfNumbersOfArraysOfArrays, int maxRangeOfNumber) {
+    public static int[][] generateRandomNumberOfArraysOfArray(int amountOfArraysofArrays, int amountOfNumbersOfArraysOfArrays, int maxRangeOfNumber) {
         int[][] randomNumbersOfArraysOfArrays = new int[amountOfArraysofArrays][];
         for(int j =0; j< amountOfArraysofArrays; j++ ) {
             randomNumbersOfArraysOfArrays[j] = generateSortedRandomNumbersOfArray(amountOfNumbersOfArraysOfArrays,maxRangeOfNumber);

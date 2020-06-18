@@ -9,7 +9,7 @@ public class LottoProcess {
         int cashAmount = inputView.getCashAmount();
         int ticketAmount = Lotto.getTicketAmount(cashAmount);
         resultView.amountOfTicketsBought(ticketAmount);
-        int[][] randomNumbersOfArray = RandomGenerator.generateRandomNumberOfArraysOfArrays(ticketAmount,6,45);
+        int[][] randomNumbersOfArray = RandomGenerator.generateRandomNumberOfArraysOfArray(ticketAmount,6,45);
 
 
     }
