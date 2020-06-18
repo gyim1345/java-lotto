@@ -12,6 +12,10 @@ public class Lotto {
         return new int[][] {{1}};
     }
 
+    public static int[] getPrizeList() {
+        return new int[] {5000, 50000, 1500000, 2000000000};
+    }
+
     public static int[] getPrizeStatistics(int[] prizeNumbers, int[][] randomLotteryTickets) {
         int[] matchCounts = getMatchCounts(prizeNumbers, randomLotteryTickets);
         int[] statistics = new int[4];
