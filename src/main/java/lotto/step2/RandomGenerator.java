@@ -17,7 +17,7 @@ public class RandomGenerator {
 
     public static int[] generateSortedRandomNumbersOfArray(int amount, int maxRange){
         int[] randomNumbersOfArray = new int[amount];
-        for(int i=1; i<=amount; i++) {
+        for(int i=0; i<amount; i++) {
             randomNumbersOfArray[i] = new Random().nextInt(maxRange);
         }
         Arrays.sort(randomNumbersOfArray);
