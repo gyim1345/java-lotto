@@ -15,9 +15,20 @@ public class resultView {
     }
 
     public static void showStatistics(int[] statistics, int[] prizeStatistics) {
+        int matchedNumber = 3;
         for(int i = 0; i<prizeStatistics.length; i++) {
-            System.out.println(i+3+"개 일치 (" + prizeStatistics[i] + ")- " +statistics[i] +"개");
+            matchedNumber = printMatchingText(statistics, prizeStatistics, matchedNumber, i);
         }
+    }
+
+    private static int printMatchingText(int[] statistics, int[] prizeStatistics, int matchedNumber, int i) {
+        if(i == 3) {
+            System.out.println(matchedNumber-1+"개 일치,보너스 볼 일치 (" + prizeStatistics[i] + ")- " +statistics[i] +"개");
+            return matchedNumber;
+        }
+        System.out.println(matchedNumber+"개 일치 (" + prizeStatistics[i] + ")- " +statistics[i] +"개");
+        matchedNumber += 1;
+        return matchedNumber;
     }
 
     public static void showProfitStatistics(double profitPercentage, boolean profited) {
