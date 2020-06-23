@@ -21,11 +21,6 @@ public class LottoTest {
         assertThat(lotto.getTicketAmount(100000)).isEqualTo(100);
     }
 
-    @Test
-    public void getTicketsTest() {
-        assertThat((lotto.getTickets(4)).length).isEqualTo(1);
-    }
-
     @DisplayName("배열안에 같은 인덱스에 있는 요소의 일치 갯수")
     @Test
     public void getMatchCountTest() {
@@ -44,7 +39,7 @@ public class LottoTest {
     @DisplayName("형식에 맞게 로또 티켓들의 모든 통계")
     @Test
     public void getPrizeStatistics() {
-        assertThat(lotto.getPrizeStatistics(new int[] {1,2,3,4,5,6}, new int[][] {{1,2,3,4,5,6},{1,3,5,6,7,8}})).isEqualTo(new int[] {0,0,0,1});
+        assertThat(lotto.getPrizeStatistics(new int[] {1,2,3,4,5,6}, new int[][] {{1,2,3,4,5,8}}, 3)).isEqualTo(new int[] {0,0,0,1,0});
     }
 
     @DisplayName("총 수입")

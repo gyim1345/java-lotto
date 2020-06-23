@@ -16,12 +16,18 @@ public class LottoProcess {
 
         String lastWeekLotteryPrizeNumberString = inputView.getLotteryNumber();
         int[] lotteryNumbers = Extractor.extractNumberFromString(lastWeekLotteryPrizeNumberString);
-        int[] prizeStatistics = Lotto.getPrizeStatistics(lotteryNumbers, randomLotteryTickets);
+        int bonusBallNumber = inputView.getBonusBallNumber();
+        int[] prizeStatistics = Lotto.getPrizeStatistics(lotteryNumbers, randomLotteryTickets, bonusBallNumber);
+
         int[] prizeList = Lotto.getPrizeList();
         resultView.showStatistics(prizeStatistics, prizeList);
 
         double profitPercentage = Lotto.getProfitPercentage(prizeStatistics, prizeList, cashAmount);
         boolean profited = Lotto.checkIfProfited(profitPercentage);
         resultView.showProfitStatistics(profitPercentage, profited);
+
+
+
+
     }
 }
