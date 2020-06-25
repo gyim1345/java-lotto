@@ -5,7 +5,16 @@ import java.util.List;
 public class LottoGameApp {
     public static void main(String[] args) {
         Cash cash = new Cash(inputView.getCashAmount());
-        List<lottoTickets> lottoTicketsList = LottoTicketGenerator.generateTicket(cash);
+//        List<lottoTicket> lottoTicketsList = LottoTicketGenerator.generateTicket(cash);
+        List<lottoTicket> lottoTickets = LottoService.generateTickets(cash);
+
+        for(lottoTicket lottoNumber : lottoTickets) {
+            System.out.println();
+            for(lottoNumber number : lottoNumber.getLotto()) {
+                System.out.print(number.getLottoNumber() + " ");
+            }
+        }
+
 
     }
 }
