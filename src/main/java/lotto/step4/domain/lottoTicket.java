@@ -1,3 +1,5 @@
+package lotto.step4.domain;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -8,7 +10,7 @@ public class lottoTicket{
     private final List<lottoNumber> lottoNumbers ;
 
 
-//    public lottoTicket(List<LottoNumber> lottoNumbers) {
+//    public lotto.step4.domain.lottoTicket(List<LottoNumber> lottoNumbers) {
 //        validatelottoTicket(lottoNumbers);
 //        this.lottoNumbers = lottoNumbers;
 //    }

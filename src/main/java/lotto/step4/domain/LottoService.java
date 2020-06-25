@@ -1,3 +1,5 @@
+package lotto.step4.domain;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,3 +1,5 @@
+package lotto.step4.domain;
+
 public class Cash {
     private final int cashAmount;
 

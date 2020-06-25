@@ -1,3 +1,5 @@
+package lotto.step4.domain;
+
 public class lottoNumber {
     public static final int MAX_VALUE = 45;
     public static final int MIN_VALUE = 1;

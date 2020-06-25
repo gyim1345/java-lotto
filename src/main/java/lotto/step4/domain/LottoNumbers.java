@@ -1,20 +1,22 @@
+package lotto.step4.domain;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class LottoNumbers {
 
-    //    private final int lottoNumber;
+    //    private final int lotto.step4.domain.lottoNumber;
     private final List<lottoNumber> lottoNumbers;
     private final int LOTTO_NUMBER_MIN = 1;
     private final int LOTTO_NUMBER_MAX = 45;
 
 
     public LottoNumbers() {
-//        validateLottoNumber(lottoNumber);
+//        validateLottoNumber(lotto.step4.domain.lottoNumber);
         this.lottoNumbers = generateLottoNumbers();
         shuffle(this.lottoNumbers);
-//        this.lottoNumber = lottoNumber;
+//        this.lotto.step4.domain.lottoNumber = lotto.step4.domain.lottoNumber;
     }
 
     private List<lottoNumber> generateLottoNumbers() {
