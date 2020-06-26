@@ -5,25 +5,19 @@ import java.util.List;
 
 public class LottoService {
 
-    public static List<lottoTicket> generateTickets(Cash cash) {
+    public static List<LottoTicket> generateTickets(Cash cash) {
         int ticketCounts = LottoService.getTicketCount(cash);
 
-
-        List<lottoTicket> lottoTickets = new ArrayList<>();
+        List<LottoTicket> LottoTickets = new ArrayList<>();
         for(int i = 0; i < ticketCounts; i += 1){
-            lottoTickets.add(new lottoTicket());
+            LottoTickets.add(new LottoTicket());
         }
 
-
-        return lottoTickets;
+        return LottoTickets;
     }
 
     private static int getTicketCount(Cash cash) {
         return cash.getCashAmount()/1000;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }
