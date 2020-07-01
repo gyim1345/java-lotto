@@ -9,7 +9,7 @@ public class CalculatorTest {
     @Test
     public void rateOfReturnTest() {
         Calculator calculator = new Calculator();
-        assertThat(calculator.rateOfReturnTest(10000, 14000)).isEqualTo(0.714285714);
-        assertThat(calculator.rateOfReturnTest(14000, 14000)).isEqualTo(1);
+        assertThat(calculator.rateOfReturnTest(10000, 14000)).isEqualTo("0.71");
+        assertThat(calculator.rateOfReturnTest(14000, 14000)).isEqualTo("1");
     }
 }
