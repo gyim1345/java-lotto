@@ -14,5 +14,8 @@ public class LottoGameApp {
         List<LottoTicket> LottoTickets = LottoService.generateTickets(cash);
         LottoTicketsDTO lottoTicketsDTO = new LottoTicketsDTO(LottoTickets);
         resultView.showTicketsFromDTO(lottoTicketsDTO);
+
+        String lottoInput = inputView.getLastWeekLottoNumber();
+        int[] lottoNumbers = Extractor.extractNumberFromString(lottoInput);
     }
 }

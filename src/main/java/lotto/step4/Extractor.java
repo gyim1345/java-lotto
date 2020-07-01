@@ -5,6 +5,7 @@ import lotto.step4.domain.LottoTicket;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Extractor {
 
@@ -32,5 +33,12 @@ public class Extractor {
             extractedList.add(innerList);
         }
         return extractedList;
+    }
+
+    public static int[] extractNumberFromString(String letters) {
+        return Stream.of(letters.replace(", ", ",")
+                .split(","))
+                .mapToInt(x-> Integer.parseInt(x))
+                .toArray();
     }
 }

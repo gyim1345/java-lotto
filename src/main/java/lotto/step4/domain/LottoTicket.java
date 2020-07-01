@@ -16,6 +16,21 @@ public class LottoTicket {
         this.LottoNumbers = LottoNumbers;
     }
 
+    public LottoTicket(List<Integer> lottoNumbers) {
+        List<LottoNumber> LottoNumbers = wrapIntegerToLottoNumber(lottoNumbers);
+        validateLottoTicket(LottoNumbers);
+        sortLottoTicketNumbers(LottoNumbers);
+        this.LottoNumbers = LottoNumbers;
+    }
+
+    private List<LottoNumber> wrapIntegerToLottoNumber(List<Integer> lottoNumbers) {
+        List<LottoNumber> newTicket = new ArrayList<>();
+        for(int i = 0; i < lottoNumbers.size(); i += 1 ){
+            newTicket.set(i,new LottoNumber(lottoNumbers.get(i)));
+        }
+        return newTicket;
+    }
+
     private List<LottoNumber> generateLottoNumbers() {
         List<LottoNumber> lottoTicketNumbers = new ArrayList<>();
 
