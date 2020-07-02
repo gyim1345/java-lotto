@@ -18,8 +18,8 @@ public class CalculatorTest {
     @Test
     public void TotalProfitTest() {
         Calculator calculator = new Calculator();
-        assertThat(calculator.totalProfit(new int [] {1000,10000,100000,1000000})).isEqualTo(1111000);
-        assertThat(calculator.totalProfit(new int [] {2000,20000,200000,2000000})).isEqualTo(2222000);
-        assertThat(calculator.totalProfit(new int [] {0,0,0,0})).isEqualTo(0);
+        assertThat(calculator.getTotalProfit(new int [] {1000,10000,100000,1000000})).isEqualTo(1111000);
+        assertThat(calculator.getTotalProfit(new int [] {2000,20000,200000,2000000})).isEqualTo(2222000);
+        assertThat(calculator.getTotalProfit(new int [] {0,0,0,0})).isEqualTo(0);
     }
 }

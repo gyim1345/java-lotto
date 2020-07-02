@@ -8,7 +8,7 @@ public class Calculator {
         return df.format(Math.floor((double) totalProfit/spentCash*100)/100);
     }
 
-    public int totalProfit(int[] profits) {
+    public static int getTotalProfit(int[] profits) {
         int totalProfit = 0;
         for(int profit : profits) {
             totalProfit += profit;
