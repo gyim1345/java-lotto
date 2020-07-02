@@ -8,6 +8,10 @@ public class Cash {
         this.cash = cash;
     }
 
+    public int getCash() {
+        return this.cash;
+    }
+
     private void validate(int cash) {
         if(cash<1000) {
             throw new IllegalArgumentException("1000원 이상 넣어 주세요");
