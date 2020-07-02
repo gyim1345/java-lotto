@@ -4,7 +4,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.Assert.assertThat;
 
 public class CashTest {
 
@@ -15,7 +14,6 @@ public class CashTest {
             new Cash(100);
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("1000원 이상 넣어 주세요");;
-
     }
 
 }
