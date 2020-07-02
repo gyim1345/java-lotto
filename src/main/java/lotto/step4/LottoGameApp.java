@@ -41,7 +41,9 @@ public class LottoGameApp {
         System.out.println("4개 일치 (50000원)- 0개");
         System.out.println("5개 일치 (1500000원)- 0개");
         System.out.println("6개 일치 (2000000000원)- 0개");
-        String a = Calculator.rateOfReturn(5000,dto.getCash());
+        int [] profits = {5000};
+
+        String a = Calculator.rateOfReturn(Calculator.getTotalProfit(profits), dto.getCash());
 
         System.out.println("총 수익률은 " + a + "입니다.(기준이 1이기 때문에 결과적으로 손해라는 의미임)");
     }
