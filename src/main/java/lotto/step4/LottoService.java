@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class LottoService {
 
     public static int[] getProfits(int[][] lottoTickets, int[] lastWeekLottoPrizeNumber) {
-        int[] rewards = {0, 0, 0, 5000, 50000, 1500000, 30000000, 2000000000};
+        int[] rewards = {0, 0, 0, 5000, 50000, 1500000, 2000000000};
         int[] profits = new int[lottoTickets.length];
         int [] totalMatchCounts = getTotalMatchCounts(lottoTickets, lastWeekLottoPrizeNumber);
 
@@ -45,4 +45,22 @@ public class LottoService {
         return 0;
     }
 
+    public static int[] getMatchingProfits(int[] profits) {
+        int [] matchingProfit = new int[4];
+        for(int i =0; i < profits.length; i += 1) {
+            if(profits[i] == 5000) {
+                matchingProfit[0] += 1;
+            }
+            if(profits[i] == 50000) {
+                matchingProfit[1] += 1;
+            }
+            if(profits[i] == 1500000) {
+                matchingProfit[2] += 1;
+            }
+            if(profits[i] == 2000000000) {
+                matchingProfit[3] += 1;
+            }
+        }
+        return matchingProfit;
+    }
 }

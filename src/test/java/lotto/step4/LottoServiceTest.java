@@ -35,8 +35,8 @@ public class LottoServiceTest {
     public void getProfitsTest() {
         LottoService lottoService = new LottoService();
         assertThat(lottoService.getProfits(lottoTickets, lastWeekLottoPrizeNumber)).isEqualTo(new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
-        assertThat(lottoService.getProfits(new int[][] {{1,2,3,4,5,6}, {1,2,3,4,5,7}, {1,3,4,5,6,7}, {1,2,3,6,5,4}}, lastWeekLottoPrizeNumber)).isEqualTo(new int[] {30000000, 1500000, 0, 50000});
-        assertThat(lottoService.getProfits(new int[][] {{1,12,13,19,15,16}, {1,2,3,4,15,17}, {1,3,4,5,6,7}, {1,2,3,6,5,4}}, lastWeekLottoPrizeNumber)).isEqualTo(new int[] {30000000, 1500000, 0, 50000});
+        assertThat(lottoService.getProfits(new int[][] {{1,2,3,4,5,6}, {1,2,3,4,5,7}, {1,3,4,5,6,7}, {1,2,3,6,5,4}}, lastWeekLottoPrizeNumber)).isEqualTo(new int[] {2000000000, 1500000, 0, 50000});
+        assertThat(lottoService.getProfits(new int[][] {{1,12,13,19,15,16}, {1,2,3,4,15,17}, {1,3,4,5,6,7}, {1,2,3,6,5,4}}, lastWeekLottoPrizeNumber)).isEqualTo(new int[] {0, 50000, 0, 50000});
     }
 
     @Test
@@ -57,6 +57,14 @@ public class LottoServiceTest {
         assertThat(lottoService.getTotalMatchCount(new int[] {1,2,13,4,15,7}, lastWeekLottoPrizeNumber)).isEqualTo(3);
         assertThat(lottoService.getTotalMatchCount(new int[] {1,2,3,4,15,7}, lastWeekLottoPrizeNumber)).isEqualTo(4);
         assertThat(lottoService.getTotalMatchCount(new int[] {1,2,3,4,5,6}, lastWeekLottoPrizeNumber)).isEqualTo(6);
+    }
+
+    @Test
+    public void getMatchingProfitsTest() {
+        LottoService lottoService = new LottoService();
+        assertThat(lottoService.getMatchingProfits(new int[] {2000000000, 1500000, 0, 50000})).isEqualTo(new int [] {0,1,1,1});
+        assertThat(lottoService.getMatchingProfits(new int[] {2000000000, 2000000000, 2000000000, 2000000000})).isEqualTo(new int [] {0,0,0,4});
+        assertThat(lottoService.getMatchingProfits(new int[] {1500000, 1500000, 5000, 1500000})).isEqualTo(new int [] {1,0,3,0});
     }
 
 }

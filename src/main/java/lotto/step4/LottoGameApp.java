@@ -24,7 +24,8 @@ public class LottoGameApp {
                 {2, 8, 9, 18, 19, 21},
                 {13, 14, 18, 21, 23, 35},
                 {17, 21, 29, 37, 42, 45},
-                {3, 8, 27, 30, 35, 44}};
+                {3, 8, 27, 30, 35, 44},
+                {1, 2, 3, 4, 5, 6}};
 
 
         for(int[] array : lottoTickets) {
@@ -35,7 +36,8 @@ public class LottoGameApp {
 
         int[] profits = LottoService.getProfits(lottoTickets, lastWeekLottoPrizeNumber);
 
-        System.out.println();
+        int[] getMatchingProfits = LottoService.getMatchingProfits(profits);
+        System.out.println(Arrays.toString(profits));
         System.out.println("지난 주 당첨 번호를 입력해 주세요.");
         System.out.println("1, 2, 3, 4, 5, 6");
         System.out.println();
