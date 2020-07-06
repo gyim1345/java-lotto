@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class LottoGameApp {
     public static void main(String[] args) {
         DTO dto = new DTO();
-        Cash cash = new Cash(InputView.getCashAmount());
-        dto.setCash(cash);
 
         System.out.println();
         System.out.println("구입금액을 입력해 주세요.");
-        System.out.println("14000");
+
+        Cash cash = new Cash(InputView.getCashAmount());
+        dto.setCash(cash);
 
         int [][] lottoTickets = {
                 {8, 21, 23, 41, 42, 43},
