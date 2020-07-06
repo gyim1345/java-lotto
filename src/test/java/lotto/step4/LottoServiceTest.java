@@ -67,4 +67,13 @@ public class LottoServiceTest {
         assertThat(lottoService.getMatchingProfits(new int[] {1500000, 1500000, 5000, 1500000})).isEqualTo(new int [] {1,0,3,0});
     }
 
+    @Test
+    public void buyTicketsTest() {
+        LottoService lottoService = new LottoService();
+        Cash cash = new Cash(5000);
+        assertThat(lottoService.buyTickets(cash)).isEqualTo(5);
+
+        Cash cash1 = new Cash(5999);
+        assertThat(lottoService.buyTickets(cash1)).isEqualTo(5);
+    }
 }

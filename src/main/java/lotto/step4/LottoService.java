@@ -1,7 +1,5 @@
 package lotto.step4;
 
-import java.util.Arrays;
-
 public class LottoService {
 
     public static int[] getProfits(int[][] lottoTickets, int[] lastWeekLottoPrizeNumber) {
@@ -62,5 +60,9 @@ public class LottoService {
             }
         }
         return matchingProfit;
+    }
+
+    public static int buyTickets(Cash cash) {
+        return cash.getCash()/1000;
     }
 }
