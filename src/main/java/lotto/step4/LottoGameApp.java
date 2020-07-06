@@ -7,9 +7,11 @@ public class LottoGameApp {
         DTO dto = new DTO();
         Cash cash = new Cash(InputView.getCashAmount());
         dto.setCash(cash);
+
         System.out.println();
         System.out.println("구입금액을 입력해 주세요.");
         System.out.println("14000");
+
         int [][] lottoTickets = {
                 {8, 21, 23, 41, 42, 43},
                 {3, 5, 11, 16, 32, 38},
@@ -33,22 +35,22 @@ public class LottoGameApp {
         }
 
         int [] lastWeekLottoPrizeNumber = {1,2,3,4,5,6};
-
         int[] profits = LottoService.getProfits(lottoTickets, lastWeekLottoPrizeNumber);
+        int[] matchedProfits = LottoService.getMatchingProfits(profits);
+        dto.setMatchingProfits(matchedProfits);
 
-        int[] getMatchingProfits = LottoService.getMatchingProfits(profits);
-        System.out.println(Arrays.toString(profits));
+
+        System.out.println();
         System.out.println("지난 주 당첨 번호를 입력해 주세요.");
-        System.out.println("1, 2, 3, 4, 5, 6");
+        System.out.println(Arrays.toString(lastWeekLottoPrizeNumber));
         System.out.println();
         System.out.println("당첨 통계");
         System.out.println("---------");
-        System.out.println("3개 일치 (5000원)- 1개");
-        System.out.println("4개 일치 (50000원)- 0개");
-        System.out.println("5개 일치 (1500000원)- 0개");
-        System.out.println("6개 일치 (2000000000원)- 0개");
 
-//        int [] profits = {5000};
+
+        for(int i = 0; i < 4; i += 1) {
+            System.out.println(i+3 + "개 일치 (" + dto.getReward(i+3) + "원)- " + dto.getMatchingProfit(i)+ "개");
+        }
 
         String a = Calculator.rateOfReturn(Calculator.getTotalProfit(profits), dto.getCash());
 
